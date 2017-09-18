@@ -1,8 +1,0 @@
-.switch label .lever:before,
-.switch label .lever:after {
-  top: 2px;
-}
-
-.switch label .lever {
-  height: 24px;
-}
