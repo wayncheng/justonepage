@@ -1,0 +1,389 @@
+@import url("color-overrides.css");
+/*--------------------------------
+
+	Media Queries
+
+	used for outputting content either between media query tags
+
+	example: basic usage
+
+	.element {
+		width: 50%;
+
+		@include mq('tablet-small') {
+			width: 20%;
+		}
+	}
+
+	example: using max-width
+
+	.element {
+		width: 50%;
+
+		@include mq('tablet-small', 'max') {
+			width: 20%;
+		}
+	}
+
+*/
+/*--------------------------------
+
+	Margin / Padding Quick Resets
+
+	example: top & bottom margin set to $spacing-unit
+	.element {
+		@include push--ends;
+	}
+
+	example: left & right padding set to $spacing-unit--small
+	.element {
+		@include soft--sides($spacing-unit--small);
+	}
+
+*/
+/*--------------------------------
+
+	Helper mixins
+
+*/
+/*--------------------------------
+
+	Form input placeholder text
+
+	example:
+
+	input,
+	textarea {
+		@include input-placeholder {
+			color: $grey;
+		}
+	}
+
+*/
+/*--------------------------------
+
+	Retina images
+
+	example:
+
+	.element {
+		@include retina {
+			background-image: url(../img/background@2x.png);
+		}
+	}
+
+*/
+/*--------------------------------
+
+	Content margins
+
+	fore removing first/last child margins
+
+	example: default
+	.element {
+		@include content-margins;
+	}
+
+	output:
+	.element > *:first-child {
+		margin-top: 0;
+	}
+	.element > *:last-child {
+		margin-bottom: 0;
+	}
+
+	example: empty selector
+	.element {
+		@include content-margins('false');
+	}
+
+	output:
+	.element:first-child {
+		margin-top: 0;
+	}
+	.element:last-child {
+		margin-bottom: 0;
+	}
+
+*/
+/*--------------------------------
+
+	CSS Triangle
+
+	used for creating CSS only triangles
+
+	example:
+	.element {
+
+		&::before {
+			@include css-triangle(blue, down);
+		}
+	}
+
+*/
+/*--------------------------------
+
+	Hide text
+
+	example:
+
+	.element {
+		@include hide-text;
+	}
+
+*/
+/*--------------------------------
+
+	Responsive ratio
+
+	Used for creating scalable elements that maintain the same ratio
+
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+
+*/
+/*--------------------------------
+
+	Typography
+
+	Text image replacement, with responsive ratio
+
+	HTML:
+
+	<h1 class="element">
+		<span>Text to replace</span>
+	</h1>
+
+	example:
+	.element {
+		@include typography(200, 50, 'hello-world');
+	}
+
+
+*/
+/*--------------------------------
+
+	Icon
+
+	For using fontastic icons in pseudo elements
+
+*/
+/*--------------------------------
+
+	Colours
+
+	background, colour, etc. match up with colour map in _variables.scss
+
+	modify to suit per project
+
+*/
+/*--------------------------------
+
+	Misc
+
+*/
+/*--------------------------------
+
+	Fluid Property
+
+	http://www.adrenalinmedia.com.au/the-agency/insights/this-changes-everything-css-fluid-properties.aspx
+
+	HTML:
+
+	<h1 class="element">
+		<span>Text to replace</span>
+	</h1>
+
+	example:
+	h1 {
+		@include fp(font-size, 50, 100); // 50px at 320, 100px at 1920;
+	}
+
+	output:
+	h1 {
+		font-size: calc(3.125vw + 40px); //This is the magic!
+	}
+
+	@media (max-width:320px){ //Clips the start to the min value
+		font-size:50px;
+	}
+
+	@media (min-width:1920px){ //Clips the end to the max value
+		font-size:100px;
+	}
+
+
+*/
+html {
+  font-size: 16px;
+  font-family: Roboto,sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.24);
+  background-color: #fff;
+  display: flex;
+}
+
+nav .header-wrap {
+  flex-basis: 90%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .header-wrap .header-menu.start {
+  display: flex;
+}
+
+main {
+  display: flex;
+  background-color: #ecf0f1;
+  min-height: 100vh;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h1 {
+  margin: auto;
+}
+
+.headline-wrap {
+  padding: 1rem;
+}
+
+.headline-wrap .headline {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #333;
+  font-family: Roboto, sans-serif;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.feed .feed-item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 90%;
+  max-width: 700px;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: Roboto,sans-serif;
+}
+
+.feed .feed-item .link-wrap {
+  color: #666;
+}
+
+.feed .feed-item .title-row {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.feed .feed-item .title-row .article-title {
+  flex: 1;
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.feed .feed-item .details-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed .feed-item .details-row p, .feed .feed-item .details-row a {
+  display: inline-block;
+  margin: 0 4px;
+  color: #bdc3c7;
+}
+
+.feed .feed-item .details-row a:hover, .feed .feed-item .details-row a:active {
+  color: #f1c40f;
+}
+
+.feed .feed-item .details-row .save-item {
+  color: #bdc3c7;
+}
+
+.feed .feed-item .details-row .save-item[data-save-status="true"] {
+  color: #f1c40f;
+}
+
+#comments-section {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: none;
+  background-color: #fff;
+  height: initial;
+  max-height: 100vh;
+  border-top: 1px solid #bdc3c7;
+}
+
+#comments-section.active {
+  display: inline-block;
+}
+
+#comments-section .container {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  max-width: 700px;
+  padding: 2rem 0;
+}
+
+#comments-section .container #posted-comments {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+#comments-section .container #posted-comments .comment {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#comments-section .container #posted-comments .comment .remove-comment {
+  z-index: 999;
+}
+
+#comments-section .container #new-comment-area {
+  display: flex;
+  flex-direction: column;
+}
+
+#comments-section .container #new-comment-area textarea {
+  font-size: 1.5rem;
+  flex-basis: 120px;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+#comments-section .container #new-comment-area #submit-comment {
+  max-width: 100px;
+}
+
+#comments-section #close-section {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 14px;
+}
