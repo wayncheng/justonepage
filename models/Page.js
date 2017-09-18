@@ -1,22 +1,23 @@
-// Require mongoose
-var mongoose = require("mongoose");
-// Create Schema class
-var Schema = mongoose.Schema;
+// Import the ORM to create functions that will interact with the database.
+var orm = require("../config/orm.js");
 
-// Create Page schema
-var PageSchema = new Schema({
-	// title is a required string
-	content: {
-		type: String,
-		required: true
-	},
-	date: {
-		type: String
-	},
-});
+var Page = {
+  all: function(cb) {
+    orm.all("Pages", function(res) {
+      cb(res);
+    });
+  },
+  // The variables cols and vals are arrays.
+  create: function(cols, vals, cb) {
+    orm.create("Pages", cols, vals, function(res) {
+      cb(res);
+    });
+  },
+  update: function(objColVals, condition, cb) {
+    orm.update("Pages", objColVals, condition, function(res) {
+      cb(res);
+    });
+  }
+};
 
-// Create the Page model with the PageSchema
-var Page = mongoose.model("Page", PageSchema);
-
-// Export the model
 module.exports = Page;
