@@ -1,4 +1,25 @@
 "use strict";
+
+var mysql = require("mysql");
+
+var connection = mysql.createConnection({
+  port: 3306,
+  host: "localhost",
+  user: "root",
+  password: "password"
+});
+
+connection.query('CREATE DATABASE IF NOT EXISTS justonepage_db', function (err, result) {
+    if (err) throw err;
+    connection.query('USE justonepage_db', function (err, result) {
+        if (err) throw err;
+		var sql = "CREATE TABLE pages (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, text TEXT)"
+        connection.query(sql, function (err, result) {
+            if (err) throw err;
+        });
+    });
+});
+
 (function() {
 	// DEPENDENCIES ===================================
 	const express = require("express");
