@@ -1,0 +1,129 @@
+@import 'modules/_colors.scss';
+
+body {
+	background-color: #ecf0f1;
+	overflow-x: hidden;
+	main {
+		overflow-y: hidden;
+	}
+	header {
+			.hero.headline {
+				color: #fff;
+				font-weight: 500;
+				letter-spacing: -0.5px;
+				transform: rotate(-24deg) translate(1rem,2rem);
+				font-size: 3rem;
+				text-transform: lowercase;
+				width: 200px;
+				text-align: left;
+			}
+	}
+	article {
+		margin-bottom: 0;
+		display: flex;
+		justify-content: center;
+		background-color: transparent;
+		// padding: 3rem 0rem 6rem;
+		padding: 9rem 0rem 6rem;
+		z-index: 400;
+		width: 100%;
+	}
+	.card-deck {
+		background-color: transparent;
+		padding: .5rem;
+		max-width: 1250px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		@media all and (max-width: 1300px) and (min-width: 620px){
+			width: 620px;
+		}
+		.ws-card-wrap {
+			// flex: 1;
+			padding: .5rem; 
+			background-color: transparent;
+			font-size: 30px;
+			max-width: 10em;
+			max-height: 13em;
+			width: 90vw;
+			height: 120vw;
+			display: inline-block;
+			@media all and (max-width: 640px){
+				display: block;
+				// width: 90vw;
+				// height: 120vw;
+				// max-width: 15em;
+				// max-height: 19em;
+			}
+			.ws-card {
+				height: 100%;
+				width: 100%;
+				
+				background-color: rgba(255,255,255,1);
+				color: #000;
+				box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.08);
+				// padding: 2rem 1rem;
+				padding: 0;
+				border-radius: .7rem;
+				border-radius: .81rem;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				justify-content: stretch;
+				align-items: stretch;
+				.card-top {
+					min-height: 10rem;
+					padding: 1rem;
+					// background-color: #666;
+					// color: #fff;
+					line-height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex: 1;
+					.headline {
+						font-size: 1.5rem;
+						font-weight: 500;
+						// display: inline-block;
+						// position: absolute;
+						// top: 50%;
+						// transform: translateX(-50%);
+					}
+				}
+				.card-bottom {
+					padding: 1rem 1rem;
+					background-color: #fff;
+					color: #000;
+					max-height: initial;
+					flex-basis: initial;
+					.subheadline {
+						font-size: 1.1rem;
+						line-height: 1em;
+						text-align: center;
+						font-weight: 400;
+						color: rgba(0,0,0,0.81)
+					}
+				}
+			}
+
+			
+		}
+	}
+}
+
+#jobba-card { }
+#mypass-card {
+}
+#vrooms-card {
+}
+#hangman-card {
+}
+
+#decor-1 { @extend .green-blue-grad; }
+#decor-2 { 	@extend .blue-grad; }
+#decor-3 { 	@extend .orange-grad; }
+#decor-4 { 	@extend .yellow-pink-grad; }
+
+ 
