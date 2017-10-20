@@ -1,0 +1,31 @@
+// @import "./vendor/_materialize-colors", "modules/_color-overrides";
+	@import "../vendor/_materialize-colors", "_color-overrides";
+
+$primary: #333;
+$link: #08c;
+
+.blue-grad {
+	// background-color: #FBAB7E;
+	// background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+	background-color: #21D4FD;
+	background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+	color: #fff;
+}
+.orange-grad {
+	// background-color: #0093E9;
+	// background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+	background-color: #FFE53B;
+	background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+	color: #fff;
+}
+.green-blue-grad {
+	background-color: #08AEEA;
+	background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+	color: #fff;	
+}
+
+.yellow-pink-grad {
+	background-color: #FEE140;
+	background-image: linear-gradient(160deg, #FEE140 0%, #FA709A 100%);
+	color: #fff;	
+}

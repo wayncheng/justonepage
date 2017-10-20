@@ -1,0 +1,107 @@
+@import '_importAll';
+
+html {
+ // font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+ font-family: $sans-serif;
+ font-size: 16px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.full-page-list {
+	outline: 1px solid red;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	
+	width: initial;
+	max-width: 800px;
+	min-width: 300px;
+	
+	font-size: 1.25rem;
+	
+	.fpl-item {
+		outline: 1px solid blue;
+
+		font-size: inherit;
+		height: 2em;
+		line-height: 2em;
+		margin: 0;
+		padding: 0 1em;
+		
+		color: #242424;
+		font-weight: 400;
+		
+		.item-label {
+			font-weight: 700;
+			margin-right: 2rem;
+		}
+		
+		a, .item-link {
+			color: $link; 
+			text-decoration: none;
+			
+		}
+	}
+}
+
+.big-table {
+	outline: 1px solid red;
+	margin: 0;
+	padding: 0;
+	
+	width: initial;
+	max-width: 800px;
+	min-width: 300px;
+	
+	font-size: 1.1rem;
+	font-weight: 300;
+	
+	color: #242424;
+
+
+	tr {
+		outline: 1px solid blue;
+
+		font-size: inherit;
+		// height: 2.4em;
+		line-height: 2.4em;
+		margin: 0;
+		padding: 0;
+		// padding: 1em;
+		// display: block;
+
+		
+		td {
+			padding: 0 1rem;
+			margin: 1rem;
+			outline: 1px solid green;
+		}
+
+		td.label {
+			font-weight: 500;
+			// margin-right: 0rem;
+			text-align: right;
+		}
+		
+		a {
+			color: $link; 
+			text-decoration: none;
+			
+		}
+	}
+
+}

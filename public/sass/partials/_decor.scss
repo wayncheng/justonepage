@@ -1,0 +1,65 @@
+.decor-container {
+	position: absolute;
+	height: 2rem;
+	width: 2rem;
+	// outline: 2px solid red;
+	top: 50%;
+	left: 50%;
+	transform: rotate(-24deg);
+	z-index: 99;
+	.decor-wrap {
+		height: 100%;
+		width: 100%;
+	}
+}
+.decor-wrap {
+	position: relative;
+	z-index: 99;
+	// overflow: hidden;
+	.decor {
+		font-size: 9rem;
+		height: 7em;
+		width: 7em;
+		border-radius: 1.5em;
+		// transform: rotate(-24deg);
+		background-color: rgba(0,0,0,0.05);
+		position: absolute;
+		box-shadow: 0 0 24px 8px rgba(0,0,0,0.08);
+	}
+}
+
+
+
+.corner {
+	// height: 3rem !important;
+	// width: 3rem !important;
+	// outline: 1px solid blue;
+	// border-radius: 0;
+	$s: 30%;
+	$top:    -100%;
+	$bottom:  100%;
+	$left:   -100%;
+	$right:   100%;
+	
+	&.top-left {
+		top: 0;
+		left: 0;
+		transform: translate($left, $top)
+	}
+	&.bottom-left {
+		bottom: 0;
+		left: 0;
+		transform: translate($left,$bottom)
+	}
+	&.bottom-right {
+		bottom: 0;
+		right: 0;
+		transform: translate($right, $bottom + $s)
+	}
+	&.top-right {
+		right: 0;
+		top: 0;
+		transform: translate($right, $top + $s)
+	}
+
+}
