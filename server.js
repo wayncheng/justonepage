@@ -1,4 +1,5 @@
 "use strict";
+
 (function() {
 	// DEPENDENCIES ===================================
 	// const exphbs = require("express-handlebars");
@@ -65,6 +66,9 @@
 	// Set Static Directory
 	app.use(express.static(path.join(__dirname, "public")));
 	
+	// API Routes
+	const apiRoutes = require('./controllers/api-controller')
+	app.use('/api', apiRoutes)
 
 	// Default React route
 	app.get("*", (req, res, next) => {
