@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "./utils/API";
 import ContentEditable from 'react-contenteditable';
-
+import UserForm from './components/UserForm';
 
 
 const breakpoint = 24;
@@ -24,6 +24,7 @@ class OnePage extends Component {
 		console.log("---- componentDidMount --->");
 
 		let {id} = this.props;
+		console.log('id',id);
 
 		API.getOne(id).then(response => {
 			console.log("response", response);
@@ -67,9 +68,10 @@ class OnePage extends Component {
 
 	render() {
 		return (
-			<main>
+			<div>
+				<h1 id="site-name"> justonepage </h1>
+				<UserForm />
 				<nav className="global-nav">
-					<h1> The Only Page </h1>
 					<button 
 						id="save-btn" 
 						className="ws-btn"
@@ -78,14 +80,7 @@ class OnePage extends Component {
 						Save
 					</button>
 				</nav>
-
-				{/* <article
-					id="doc"
-					className="content-wrap"
-					contentEditable="true"
-					onKeyUp={this.handleChange}
-				> */}
-					{/* {this.state.content} */}
+				<main>
 					<ContentEditable
 						id="doc" 
 						className="content-wrap"
@@ -93,8 +88,8 @@ class OnePage extends Component {
 						disabled={false} 
 						onChange={this.handleChange}
 					/>
-				{/* </article> */}
-			</main>
+				</main>
+			</div>
 		);
 	}
 }

@@ -2,6 +2,12 @@
 var orm = require("../config/orm.js");
 
 var Page = {
+  one: function(id,cb) {
+		console.log('dbPage id', id);
+    orm.one(id, function(res) {
+      cb(res);
+    });
+  },
   all: function(cb) {
     orm.all("Pages", function(res) {
       cb(res);

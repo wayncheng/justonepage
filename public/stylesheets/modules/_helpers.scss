@@ -1,0 +1,139 @@
+/* ---------- Helper Classes ---------- */
+//============================================
+// Flex 
+	$flex-class-slug: 'f' !default;
+
+	@for $i from 0 through 12 {
+		.#{$flex-class-slug}#{$i} {
+			flex: $i !important;
+		}
+	}
+
+
+//============================================
+// Max/Min 
+
+	@mixin break-fill($break: 0px, $fill: 100% ){
+		min-width: $break;
+		@media all and (max-width: $break){ 
+			min-width: 100% !important; 
+			width:     100% !important; 
+		}
+	}
+
+	$prev-name: '0';
+	$prev: 0px;
+	@each $name,$val in $breakpoints {
+		// $break: $val;
+		$break: nth($val,1);
+		// $max: nth($range,2);
+		
+		@if $name != '0' {
+			$mid-break:  ($break+$prev)/2;
+			.max-#{$prev-name}-#{$name}, .max-#{$name}-#{$prev-name} { 
+				max-width: $mid-break;
+			}
+			.min-#{$prev-name}-#{$name}, .min-#{$name}-#{$prev-name} { 
+				// min-width: $mid-break;
+				@include break-fill($mid-break);
+			}
+		}
+
+		.max-#{$name} {
+			max-width: $break; 
+		}
+		.min-#{$name} {
+			// min-width: $break; 
+			@include break-fill($break);
+		}
+		
+
+		$prev-name: $name;
+		$prev: $break;
+	}
+
+//============================================
+// Visibility 
+
+	// Hide ONLY visually. Still reachable by screen readers.
+	.visually-hidden, .for-aria {
+		position: absolute; // Remove the item from normal flow
+		white-space: nowrap; // Workaround for falsely pronounced, smushed text
+		width: 1px; // Set it to the smallest possible size (some screen readers ignore elements with zero height and width)
+		height: 1px;
+		overflow: hidden; // Hide overflowing content after resizing
+		border: 0; // Reset any property that may change the elements size
+		padding: 0;
+		clip: rect(0 0 0 0); // Clipping defines what part of an element should be displayed. Deprecated clip property for older browsers
+		clip-path: inset(50%); // clip-path for newer browsers. inset(50%) defines an inset rectangle that makes the content disappear. 
+		margin: -1px; // It seems like at the moment nobody is quite sure why margin: -1px is there. On top of that it seems to cause issues (see: https://github.com/h5bp/html5-boilerplate/issues/1985).
+	}
+
+//============================================
+// Layout
+	/* Blank Center */
+	.flex-center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.transform-center {
+		position: relative;
+		display: inline-block;
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+
+
+		& > :first-child {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+
+//============================================
+// Position / Size
+	.position-reset {
+		position: relative; 
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.no-padding {
+		padding: 0;
+	}
+
+	.bump-top {
+		margin-top: 1rem;
+	}
+
+	.expand-and-center {
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.ws-mini {
+		font-size: $font-S;
+		padding: .8em 1em;
+	}
+
+
+//============================================
+// Typography
+//============================================
+
+.bottom-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}

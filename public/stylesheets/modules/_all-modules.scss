@@ -1,0 +1,6 @@
+// The modules directory is reserved for Sass code that doesn't cause Sass to actually output CSS. 
+// Things like mixin declarations, functions, and variables.
+
+// @import '_variables', '_colors', '_helpers', '_color-scheme', '_mixins', '_media-queries';
+
+@import 'modules/_variables', 'modules/_colors', 'modules/_helpers', 'modules/_color-scheme', 'modules/_media-queries'; // ALT PATHS

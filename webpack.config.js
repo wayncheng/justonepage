@@ -10,39 +10,41 @@ module.exports = {
 	},
 
 	resolve: {
-		extensions: ["", ".js", ".jsx", '.webpack.js', '.web.js' ],
+		extensions: [".js", ".jsx"],
 		modulesDirectories: [path.resolve(__dirname, "node_modules")]
-	},
-	resolveLoader: {
-		root: path.resolve(__dirname, "node_modules")
+		modules: [path.join(__dirname, "src"), "node_modules"]
 	},
 
 	// This section desribes the transformations we will perform
 	module: {
-		// noParse: ["/node_modules/aframe/dist/aframe-master.js"],
 		loaders: [
 			{
-				// Only working with files that in in a .js or .jsx extension
 				test: /\.jsx?$/,
-				// Webpack will only process files in our src folder. This avoids processing
-				// node modules and server files unnecessarily
 				include: /src/,
 				exclude: path.resolve(__dirname, "node_modules"),
-				loader: "babel",
-				query: {
+				loader: "babel-loader",
+				options: {
 					// These are the specific transformations we'll be using.
 					presets: ["react", "es2015", "stage-2"]
 				}
 			},
 			{
-				test: /\.css$/,
-				loader: "style-loader!css-loader"
+				test: /(\.min)?\.css$/,
+				use: ["style-loader", "css-loader"]
 			},
-			{ test: /\.json$/, loader: "json-loader" }
+			{
+				test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				// Limiting the size of the woff fonts breaks font-awesome ONLY for the extract text plugin
+				// loader: "url?limit=10000"
+				use: ["url-loader"]
+			},
+			{
+				// test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+				test: /\.(ttf|eot)(\?[\s\S]+)?$/,
+				use: ["file-loader"]
+			}
 		]
 	},
-	// This lets us debug our react code in chrome dev tools. Errors will have lines and file names
-	// Without this the console says all errors are coming from just coming from bundle.js
 	devtool: "eval-source-map",
 
 	node: {

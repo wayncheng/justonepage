@@ -3,7 +3,8 @@
 ////////////////////////////////////////////////////
 	// Import MySQL connection.
 	var connection = require("../config/connection.js");
-	const table = 'justonepage_db.pages'
+	// const table = 'justonepage_db.pages'
+	const table = process.env.JAWSDB_DB+'.pages'
 	
 	// Object for all our SQL statement functions.
 	var orm = {

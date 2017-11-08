@@ -1,12 +1,12 @@
-### Schema
 
-CREATE DATABASE cat_db;
-USE cat_db;
-
-CREATE TABLE cats
+CREATE TABLE pages
 (
-	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
-	sleepy BOOLEAN DEFAULT false,
-	PRIMARY KEY (id)
+	"id" INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	"text" TEXT
 );
+CREATE TABLE users (
+  "id" INT NOT NULL AUTO_INCREMENT,
+  "user" VARCHAR(255) NOT NULL,
+  "pw" VARCHAR(255) NOT NULL,
+  PRIMARY KEY ("id"));
+
