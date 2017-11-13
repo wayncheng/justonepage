@@ -11,7 +11,6 @@ module.exports = {
 
 	resolve: {
 		extensions: [".js", ".jsx"],
-		modulesDirectories: [path.resolve(__dirname, "node_modules")]
 		modules: [path.join(__dirname, "src"), "node_modules"]
 	},
 
@@ -28,21 +27,63 @@ module.exports = {
 					presets: ["react", "es2015", "stage-2"]
 				}
 			},
-			{
+			{ // CSS 
 				test: /(\.min)?\.css$/,
 				use: ["style-loader", "css-loader"]
 			},
-			{
+			{ // WOFF, WOFF2 
 				test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 				// Limiting the size of the woff fonts breaks font-awesome ONLY for the extract text plugin
 				// loader: "url?limit=10000"
 				use: ["url-loader"]
 			},
-			{
-				// test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+			{ // TTG, EOT 
 				test: /\.(ttf|eot)(\?[\s\S]+)?$/,
 				use: ["file-loader"]
-			}
+			},
+			{ // SVG 
+				test: /\.svg$/,
+				exclude: /node_modules/,
+				use: ["svg-react-loader"],
+				// options: {
+				// 	classIdPrefix: "[name]-[hash:8]__",
+				// 	filters: [
+				// 			function (value) {
+				// 					// ...
+				// 					this.update(newvalue);
+				// 			}
+				// 	],
+				// 	propsMap: {
+				// 			fillRule: 'fill-rule',
+				// 			foo: 'bar'
+				// 	},
+				// 	xmlnsTest: /^xmlns.*$/
+				// }
+			},
+			{ // GIF, PNG, JPG, JPEG
+				test: /\.(gif|png|jpe?g)$/i,
+				// include: /public/, // only process files in public
+				exclude: path.resolve(__dirname, "node_modules"),
+				
+				// exclude: [
+				// 	path.resolve(__dirname, "node_modules"),
+				// 	path.resolve(__dirname, "public", "libs")
+				// ],
+				use: [ 
+					{
+						loader: 'file-loader',
+						options: {
+							emitFile: false,
+						},
+					},
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							bypassOnDebug: true,
+						},
+					},
+				],
+			},
 		]
 	},
 	devtool: "eval-source-map",

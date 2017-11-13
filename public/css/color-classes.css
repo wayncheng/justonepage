@@ -1,0 +1,881 @@
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-primary {
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-primary:hover, .ws-primary:active, .ws-primary:focus {
+  background-color: #2b94d9;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-primary.isOutlined {
+  background-color: transparent;
+  color: #3498db;
+  border-color: #3498db;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-primary.isOutlined:hover, .ws-primary.isOutlined:active, .ws-primary.isOutlined:focus {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-primary {
+  background-color: #3498db;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-primary:hover, .bg-primary:active, .bg-primary:focus {
+  background-color: #2b94d9 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-primary {
+  color: #3498db;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-primary:hover, .fg-primary:active, .fg-primary:focus {
+  color: #2b94d9 !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-secondary {
+  background-color: #1abc9c;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-secondary:hover, .ws-secondary:active, .ws-secondary:focus {
+  background-color: #19b395;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-secondary.isOutlined {
+  background-color: transparent;
+  color: #1abc9c;
+  border-color: #1abc9c;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-secondary.isOutlined:hover, .ws-secondary.isOutlined:active, .ws-secondary.isOutlined:focus {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-secondary {
+  background-color: #1abc9c;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-secondary:hover, .bg-secondary:active, .bg-secondary:focus {
+  background-color: #19b395 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-secondary {
+  color: #1abc9c;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-secondary:hover, .fg-secondary:active, .fg-secondary:focus {
+  color: #19b395 !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-success {
+  background-color: #2ecc71;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-success:hover, .ws-success:active, .ws-success:focus {
+  background-color: #2cc46c;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-success.isOutlined {
+  background-color: transparent;
+  color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-success.isOutlined:hover, .ws-success.isOutlined:active, .ws-success.isOutlined:focus {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-success {
+  background-color: #2ecc71;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-success:hover, .bg-success:active, .bg-success:focus {
+  background-color: #2cc46c !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-success {
+  color: #2ecc71;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-success:hover, .fg-success:active, .fg-success:focus {
+  color: #2cc46c !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-danger {
+  background-color: #e74c3c;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-danger:hover, .ws-danger:active, .ws-danger:focus {
+  background-color: #e64433;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-danger.isOutlined {
+  background-color: transparent;
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-danger.isOutlined:hover, .ws-danger.isOutlined:active, .ws-danger.isOutlined:focus {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-danger {
+  background-color: #e74c3c;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-danger:hover, .bg-danger:active, .bg-danger:focus {
+  background-color: #e64433 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-danger {
+  color: #e74c3c;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-danger:hover, .fg-danger:active, .fg-danger:focus {
+  color: #e64433 !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-info {
+  background-color: #9b59b6;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-info:hover, .ws-info:active, .ws-info:focus {
+  background-color: #9752b3;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-info.isOutlined {
+  background-color: transparent;
+  color: #9b59b6;
+  border-color: #9b59b6;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-info.isOutlined:hover, .ws-info.isOutlined:active, .ws-info.isOutlined:focus {
+  background-color: #9b59b6;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-info {
+  background-color: #9b59b6;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-info:hover, .bg-info:active, .bg-info:focus {
+  background-color: #9752b3 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-info {
+  color: #9b59b6;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-info:hover, .fg-info:active, .fg-info:focus {
+  color: #9752b3 !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-warning {
+  background-color: #f39c12;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-warning:hover, .ws-warning:active, .ws-warning:focus {
+  background-color: #ef970c;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-warning.isOutlined {
+  background-color: transparent;
+  color: #f39c12;
+  border-color: #f39c12;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-warning.isOutlined:hover, .ws-warning.isOutlined:active, .ws-warning.isOutlined:focus {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-warning {
+  background-color: #f39c12;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-warning:hover, .bg-warning:active, .bg-warning:focus {
+  background-color: #ef970c !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-warning {
+  color: #f39c12;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-warning:hover, .fg-warning:active, .fg-warning:focus {
+  color: #ef970c !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-disabled {
+  background-color: #95a5a6;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-disabled:hover, .ws-disabled:active, .ws-disabled:focus {
+  background-color: #8fa0a1;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-disabled.isOutlined {
+  background-color: transparent;
+  color: #95a5a6;
+  border-color: #95a5a6;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-disabled.isOutlined:hover, .ws-disabled.isOutlined:active, .ws-disabled.isOutlined:focus {
+  background-color: #95a5a6;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-disabled {
+  background-color: #95a5a6;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-disabled:hover, .bg-disabled:active, .bg-disabled:focus {
+  background-color: #8fa0a1 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-disabled {
+  color: #95a5a6;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-disabled:hover, .fg-disabled:active, .fg-disabled:focus {
+  color: #8fa0a1 !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-black {
+  background-color: #000000;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-black:hover, .ws-black:active, .ws-black:focus {
+  background-color: #0d0d0d;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-black.isOutlined {
+  background-color: transparent;
+  color: #000000;
+  border-color: #000000;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-black.isOutlined:hover, .ws-black.isOutlined:active, .ws-black.isOutlined:focus {
+  background-color: #000000;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-black {
+  background-color: #000000;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-black:hover, .bg-black:active, .bg-black:focus {
+  background-color: #0d0d0d !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-black {
+  color: #000000;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-black:hover, .fg-black:active, .fg-black:focus {
+  color: #0d0d0d !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-dark {
+  background-color: #343434;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-dark:hover, .ws-dark:active, .ws-dark:focus {
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-dark.isOutlined {
+  background-color: transparent;
+  color: #343434;
+  border-color: #343434;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-dark.isOutlined:hover, .ws-dark.isOutlined:active, .ws-dark.isOutlined:focus {
+  background-color: #343434;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-dark {
+  background-color: #343434;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-dark:hover, .bg-dark:active, .bg-dark:focus {
+  background-color: #2f2f2f !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-dark {
+  color: #343434;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-dark:hover, .fg-dark:active, .fg-dark:focus {
+  color: #2f2f2f !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-light {
+  background-color: #ecf0f1;
+  color: rgba(0, 0, 0, 0.87);
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-light:hover, .ws-light:active, .ws-light:focus {
+  background-color: #e6ebed;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-light.isOutlined {
+  background-color: transparent;
+  color: #ecf0f1;
+  border-color: #ecf0f1;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-light.isOutlined:hover, .ws-light.isOutlined:active, .ws-light.isOutlined:focus {
+  background-color: #ecf0f1;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-light {
+  background-color: #ecf0f1;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-light:hover, .bg-light:active, .bg-light:focus {
+  background-color: #e6ebed !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-light {
+  color: #ecf0f1;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-light:hover, .fg-light:active, .fg-light:focus {
+  color: #e6ebed !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-white {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-white:hover, .ws-white:active, .ws-white:focus {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-white.isOutlined {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-white.isOutlined:hover, .ws-white.isOutlined:active, .ws-white.isOutlined:focus {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-white {
+  background-color: #ffffff;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-white:hover, .bg-white:active, .bg-white:focus {
+  background-color: #fafafa !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-white {
+  color: #ffffff;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-white:hover, .fg-white:active, .fg-white:focus {
+  color: #fafafa !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-transparent {
+  background-color: transparent;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-transparent:hover, .ws-transparent:active, .ws-transparent:focus {
+  background-color: rgba(13, 13, 13, 0);
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-transparent.isOutlined {
+  background-color: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-transparent.isOutlined:hover, .ws-transparent.isOutlined:active, .ws-transparent.isOutlined:focus {
+  background-color: transparent;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-transparent {
+  background-color: transparent;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-transparent:hover, .bg-transparent:active, .bg-transparent:focus {
+  background-color: rgba(13, 13, 13, 0) !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-transparent {
+  color: transparent;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-transparent:hover, .fg-transparent:active, .fg-transparent:focus {
+  color: rgba(13, 13, 13, 0) !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-red {
+  background-color: #e74c3c;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-red:hover, .ws-red:active, .ws-red:focus {
+  background-color: #e64433;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-red.isOutlined {
+  background-color: transparent;
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-red.isOutlined:hover, .ws-red.isOutlined:active, .ws-red.isOutlined:focus {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-red {
+  background-color: #e74c3c;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-red:hover, .bg-red:active, .bg-red:focus {
+  background-color: #e64433 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-red {
+  color: #e74c3c;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-red:hover, .fg-red:active, .fg-red:focus {
+  color: #e64433 !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-orange {
+  background-color: #f39c12;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-orange:hover, .ws-orange:active, .ws-orange:focus {
+  background-color: #ef970c;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-orange.isOutlined {
+  background-color: transparent;
+  color: #f39c12;
+  border-color: #f39c12;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-orange.isOutlined:hover, .ws-orange.isOutlined:active, .ws-orange.isOutlined:focus {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-orange {
+  background-color: #f39c12;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-orange:hover, .bg-orange:active, .bg-orange:focus {
+  background-color: #ef970c !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-orange {
+  color: #f39c12;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-orange:hover, .fg-orange:active, .fg-orange:focus {
+  color: #ef970c !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-yellow {
+  background-color: #f1c40f;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-yellow:hover, .ws-yellow:active, .ws-yellow:focus {
+  background-color: #e8bd0e;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-yellow.isOutlined {
+  background-color: transparent;
+  color: #f1c40f;
+  border-color: #f1c40f;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-yellow.isOutlined:hover, .ws-yellow.isOutlined:active, .ws-yellow.isOutlined:focus {
+  background-color: #f1c40f;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-yellow {
+  background-color: #f1c40f;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-yellow:hover, .bg-yellow:active, .bg-yellow:focus {
+  background-color: #e8bd0e !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-yellow {
+  color: #f1c40f;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-yellow:hover, .fg-yellow:active, .fg-yellow:focus {
+  color: #e8bd0e !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-green {
+  background-color: #2ecc71;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-green:hover, .ws-green:active, .ws-green:focus {
+  background-color: #2cc46c;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-green.isOutlined {
+  background-color: transparent;
+  color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-green.isOutlined:hover, .ws-green.isOutlined:active, .ws-green.isOutlined:focus {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-green {
+  background-color: #2ecc71;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-green:hover, .bg-green:active, .bg-green:focus {
+  background-color: #2cc46c !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-green {
+  color: #2ecc71;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-green:hover, .fg-green:active, .fg-green:focus {
+  color: #2cc46c !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-blue {
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-blue:hover, .ws-blue:active, .ws-blue:focus {
+  background-color: #2b94d9;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-blue.isOutlined {
+  background-color: transparent;
+  color: #3498db;
+  border-color: #3498db;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-blue.isOutlined:hover, .ws-blue.isOutlined:active, .ws-blue.isOutlined:focus {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-blue {
+  background-color: #3498db;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-blue:hover, .bg-blue:active, .bg-blue:focus {
+  background-color: #2b94d9 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-blue {
+  color: #3498db;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-blue:hover, .fg-blue:active, .fg-blue:focus {
+  color: #2b94d9 !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-purple {
+  background-color: #9b59b6;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-purple:hover, .ws-purple:active, .ws-purple:focus {
+  background-color: #9752b3;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-purple.isOutlined {
+  background-color: transparent;
+  color: #9b59b6;
+  border-color: #9b59b6;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-purple.isOutlined:hover, .ws-purple.isOutlined:active, .ws-purple.isOutlined:focus {
+  background-color: #9b59b6;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-purple {
+  background-color: #9b59b6;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-purple:hover, .bg-purple:active, .bg-purple:focus {
+  background-color: #9752b3 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-purple {
+  color: #9b59b6;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-purple:hover, .fg-purple:active, .fg-purple:focus {
+  color: #9752b3 !important;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-dark-bluegrey {
+  background-color: #37474f;
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+/* line 52, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-dark-bluegrey:hover, .ws-dark-bluegrey:active, .ws-dark-bluegrey:focus {
+  background-color: #334249;
+  color: #fff;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-dark-bluegrey.isOutlined {
+  background-color: transparent;
+  color: #37474f;
+  border-color: #37474f;
+}
+
+/* line 61, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.ws-dark-bluegrey.isOutlined:hover, .ws-dark-bluegrey.isOutlined:active, .ws-dark-bluegrey.isOutlined:focus {
+  background-color: #37474f;
+  color: #fff;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-dark-bluegrey {
+  background-color: #37474f;
+}
+
+/* line 72, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.bg-dark-bluegrey:hover, .bg-dark-bluegrey:active, .bg-dark-bluegrey:focus {
+  background-color: #334249 !important;
+}
+
+/* line 76, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-dark-bluegrey {
+  color: #37474f;
+}
+
+/* line 78, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.fg-dark-bluegrey:hover, .fg-dark-bluegrey:active, .fg-dark-bluegrey:focus {
+  color: #334249 !important;
+}
+
+/* line 85, /Users/waynecheng/git/justonepage/public/sass/color-classes.scss */
+.isOutlined {
+  border-style: solid;
+  border-width: 2px;
+}
+
+/*# sourceMappingURL=../css/color-classes.map */

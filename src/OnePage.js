@@ -3,7 +3,6 @@ import API from "./utils/API";
 import ContentEditable from 'react-contenteditable';
 import UserForm from './components/UserForm';
 
-
 const breakpoint = 24;
 
 let content =
@@ -68,13 +67,17 @@ class OnePage extends Component {
 
 	render() {
 		return (
-			<div>
-				<h1 id="site-name"> justonepage </h1>
-				<UserForm />
-				<nav className="global-nav">
+			<div id="justoneroot">
+				<a className="sitename-wrap" href="https://github.com/wayncheng/justonepage" >
+					<h1 className="sitename"> justonepage </h1>
+				</a>
+				<nav className="globalnav">
+				<a className="gn-burger" href="#!">
+					<img src="icons/burger-black-a-round.svg"/>
+				</a>
 					<button 
 						id="save-btn" 
-						className="ws-btn"
+						className="ws-btn ws-light ws-mini"
 						onClick={this.handleSave}
 					>
 						Save
@@ -89,6 +92,8 @@ class OnePage extends Component {
 						onChange={this.handleChange}
 					/>
 				</main>
+				{/* <UserForm /> */}
+				
 			</div>
 		);
 	}

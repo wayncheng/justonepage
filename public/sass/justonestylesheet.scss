@@ -1,0 +1,89 @@
+
+
+html {
+	font-size: 14px;
+}
+#justoneroot {
+	position: relative;
+
+	overflow-x: hidden;
+
+}
+
+
+main {
+	height: initial;
+	min-height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	margin: 0;
+}
+
+
+.content-wrap {
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	padding: 6rem 6rem 0;
+	border: 1px solid #ddd;
+	min-height: 85vh;
+	margin-bottom: 0;
+	outline: none;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	&:hover, &:active, &:focus {
+		outline: none;
+	}
+}
+
+.ws-btn {
+	border: none;
+}
+
+.globalnav {
+	// display: flex;
+	// flex-direction: row;
+	// justify-content: space-between;
+	// align-items: center;
+	display: inline-block;
+	// flex-direction: unset;
+	// justify-content: unset;
+	// align-items: unset;
+	padding: 0 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	width: initial;
+
+	& > * {
+		float: left;
+	}
+	#save-btn {
+		// margin-top: 0.6rem;
+		display: inline-block;
+		margin: 0.6rem;
+	}
+}
+
+.sitename-wrap {
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	// By setting width equal to line height, 
+	// it creates a square, which is easier to 
+	// position than the rectangle that was 
+	// flipped but not at the same time.
+	width: 1em; /*___IMPORTANT___*/
+}
+.sitename {
+	transform: rotate(270deg);
+	font-size: 1rem;
+	color: #242424;
+}

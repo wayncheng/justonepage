@@ -1,0 +1,113 @@
+/*===== Font Weights =====*/
+/*===== Font Stack =====*/
+/*===== Font Sizes =====*/
+/*===== Heights. Widths =====*/
+/*===== Breakpoints =====*/
+/* 
+		a <300
+		b 300-450
+		c 450-600
+		d 600-800
+		e 800-1200
+		f 1200-1920
+		g 1920-3840 
+	*/
+/*===== Navbar =====*/
+/* line 68, /Users/waynecheng/git/justonepage/public/sass/modules/_gradients.scss */
+#landing-root .full-screen-wrap {
+  background: #ebedee;
+  background: -webkit-linear-gradient(180deg, #ebedee -20%, #fdfbfb 100%);
+  background: -moz-linear-gradient(180deg, #ebedee -20%, #fdfbfb 100%);
+  background: linear-gradient(180deg, #ebedee -20%, #fdfbfb 100%);
+}
+
+/* line 4, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 17, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap .headline {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  width: 200px;
+  text-align: left;
+  margin: 2rem 0;
+}
+
+/* line 35, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap .page-link-nav {
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+/* line 44, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap .page-link-nav .page-link {
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: center;
+}
+
+/* line 49, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap .page-link-nav .page-link a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #08c;
+}
+
+/* line 56, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap .page-link-nav .page-link a:hover {
+  color: #0077b3;
+}
+
+/* line 70, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap.bladerunner .page-link-nav {
+  max-width: 240px;
+}
+
+/* line 73, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap.bladerunner .headline {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: 300;
+  word-spacing: .2em;
+  width: initial;
+  line-height: 1.5;
+  padding: 1rem;
+  margin: 0;
+}
+
+/* line 84, /Users/waynecheng/git/justonepage/public/sass/landing.scss */
+#landing-root .full-screen-wrap.bladerunner .page-link {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .2em;
+  word-spacing: .2em;
+  text-align: left;
+}
+
+/*# sourceMappingURL=../css/landing.map */

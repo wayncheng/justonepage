@@ -8,5 +8,5 @@ CREATE TABLE users (
   "id" INT NOT NULL AUTO_INCREMENT,
   "user" VARCHAR(255) NOT NULL,
   "pw" VARCHAR(255) NOT NULL,
-  PRIMARY KEY ("id"));
-
+  PRIMARY KEY ("id")
+);

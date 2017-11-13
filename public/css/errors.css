@@ -1,0 +1,52 @@
+/*===== Font Weights =====*/
+/*===== Font Stack =====*/
+/*===== Font Sizes =====*/
+/*===== Heights. Widths =====*/
+/*===== Breakpoints =====*/
+/* 
+		a <300
+		b 300-450
+		c 450-600
+		d 600-800
+		e 800-1200
+		f 1200-1920
+		g 1920-3840 
+	*/
+/*===== Navbar =====*/
+/* line 3, /Users/waynecheng/git/justonepage/public/sass/errors.scss */
+#error404-root {
+  padding: 5%;
+}
+
+/* line 5, /Users/waynecheng/git/justonepage/public/sass/errors.scss */
+#error404-root .headline {
+  font-weight: unset;
+}
+
+/* line 8, /Users/waynecheng/git/justonepage/public/sass/errors.scss */
+#error404-root .subheadline {
+  margin-top: 2rem;
+  font-weight: 300;
+  max-width: 420px;
+}
+
+/* line 13, /Users/waynecheng/git/justonepage/public/sass/errors.scss */
+#error404-root h2 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+/* line 17, /Users/waynecheng/git/justonepage/public/sass/errors.scss */
+#error404-root .pop {
+  font-weight: 800;
+}
+
+/* line 21, /Users/waynecheng/git/justonepage/public/sass/errors.scss */
+#error404-root #waldo-img {
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=../css/errors.map */

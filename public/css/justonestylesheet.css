@@ -1,0 +1,88 @@
+/* line 3, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+html {
+  font-size: 14px;
+}
+
+/* line 6, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+#justoneroot {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* line 14, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+main {
+  height: initial;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
+/* line 26, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.content-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 6rem 6rem 0;
+  border: 1px solid #ddd;
+  min-height: 85vh;
+  margin-bottom: 0;
+  outline: none;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* line 39, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.content-wrap:hover, .content-wrap:active, .content-wrap:focus {
+  outline: none;
+}
+
+/* line 44, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.ws-btn {
+  border: none;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.globalnav {
+  display: inline-block;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  width: initial;
+}
+
+/* line 65, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.globalnav > * {
+  float: left;
+}
+
+/* line 68, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.globalnav #save-btn {
+  display: inline-block;
+  margin: 0.6rem;
+}
+
+/* line 75, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.sitename-wrap {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 1em;
+  /*___IMPORTANT___*/
+}
+
+/* line 85, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.sitename {
+  transform: rotate(270deg);
+  font-size: 1rem;
+  color: #242424;
+}
+
+/*# sourceMappingURL=../css/justonestylesheet.map */
