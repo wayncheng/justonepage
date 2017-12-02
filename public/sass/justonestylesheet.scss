@@ -26,6 +26,7 @@ main {
 
 
 .content-wrap {
+	font-size: 18px;
 	width: 100%;
 	// width: 90%;
 	max-width: 900px;
@@ -39,10 +40,10 @@ main {
 	height: 100vh;
 	overflow-y: scroll;
 	overflow-x: hidden;
-		// background-color: yellow;
-		// color: black;
-		// font-size: 24px;
-		// line-height: 1.5em;
+	
+	line-height: 1.25;
+	color: rgba(0,0,0,0.87);
+	font-weight: lighter;
 
 	&:hover, &:active, &:focus {
 		outline: none;
@@ -94,4 +95,63 @@ main {
 	transform: rotate(270deg);
 	font-size: 1rem;
 	color: #242424;
+}
+
+
+.modal-layer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(81,81,81,.24);
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+
+	&.closed {
+		z-index: -1;
+		visibility: hidden;
+		display: none;
+	}
+
+	.close-btn {
+		position: fixed;
+		top: 1rem; 
+		right: 1rem;
+	}
+}
+.user-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	height: initial;
+	width: 100%;
+	max-width: 400px;
+	padding: 2rem;
+	background-color: #fff;
+	z-index: 9010;
+
+	& > * {
+		margin: .5rem 0;
+		font-size: 1.2rem;
+	}
+}
+
+.pin-top-left {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+}
+
+.blurred-out {
+	-webkit-filter: blur(6px);
+		 -moz-filter: blur(6px);
+			-ms-filter: blur(6px);
+			 -o-filter: blur(6px);
+					filter: blur(6px);
 }
