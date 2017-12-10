@@ -132,22 +132,37 @@ main {
   padding: 2rem;
   background-color: #fff;
   z-index: 9010;
+  border-radius: 5px;
 }
 
-/* line 139, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+/* line 140, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
 .user-form > * {
   margin: .5rem 0;
   font-size: 1.2rem;
 }
 
 /* line 145, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.user-form input[type="text"] {
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  outline: none;
+  padding: 0 1em;
+  line-height: 2.5em;
+  border-radius: 5px;
+}
+
+/* line 151, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.user-form input[type="text"]:focus, .user-form input[type="text"]:active, .user-form input[type="text"]:hover {
+  border-color: black;
+}
+
+/* line 158, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
 .pin-top-left {
   position: fixed;
   top: 1rem;
   left: 1rem;
 }
 
-/* line 151, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+/* line 164, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
 .blurred-out {
   -webkit-filter: blur(6px);
   -moz-filter: blur(6px);
