@@ -1,7 +1,7 @@
 // Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+const orm = require("../config/orm.js");
 
-var Page = {
+const Page = {
   one: function(id,cb) {
 		console.log('dbPage id', id);
     orm.one(id, function(res) {
@@ -15,7 +15,7 @@ var Page = {
   },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
-    orm.create("Pages", cols, vals, function(res) {
+    orm.create(cols, vals, function(res) {
       cb(res);
     });
   },

@@ -1,12 +1,12 @@
 "use strict";
 (function() {
-  var express = require("express");
-  var bodyParser = require("body-parser");
-  var router = express.Router();
-  // var db = require("../models");
-  var dbPage = require("../models/Page");
-  var bcrypt = require("bcryptjs");
-  var saltRounds = 10;
+  const express = require("express");
+  const bodyParser = require("body-parser");
+	const router = express.Router();
+  const dbPage = require("../models/Page");
+  const ORM = require("../config/orm");
+  const bcrypt = require("bcryptjs");
+  const saltRounds = 10;
 
 
   /////////////////////////////////////////////////////
@@ -16,8 +16,23 @@
   //     return res.json(data);
   //   });
 	// });
-	
-	router.get('/:id', (req,res) => {
+	// GET User Data ///////////////////////////////////////////////////
+	router.get('/data/:username', (req,res) => {
+		console.log('controller / data / username');
+		ORM.getUserData( req.params.username, data => {
+			console.log('data',data);
+			return res.json(data);
+		})
+	})
+	// GET User ///////////////////////////////////////////////////
+	router.get('/user/:username', (req,res) => {
+		ORM.getByName( req.params.username, data => {
+			console.log('data',data);
+			return res.json(data);
+		})
+	})
+	/////////////////////////////////////////////////////
+	router.get('/id/:id', (req,res) => {
 		const {id} = req.params;
 		// console.log('req.params',req.params);
 		console.log('api-controller id',id);
@@ -25,7 +40,7 @@
 		// 	console.log('data',data);
 		// 	return res.json(data);
 		// })
-		dbPage.one(id, data => {
+		dbPage.getById(id, data => {
 			console.log('data',data);
 			return res.json(data);
 		})

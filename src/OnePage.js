@@ -5,8 +5,6 @@ import UserForm from "./components/UserForm";
 
 const breakpoint = 24;
 
-let content =
-	"High Life stumptown pork belly bicycle rights sustainable shabby chic cliche Vice Tumblr artisan selfies kale chips ethical blog gentrify swag pug next level raw denim polaroid sartorial leggings Carles DIY Kickstarter fingerstache dreamcatcher literally single-origin coffee biodiesel banh mi.";
 
 class OnePage extends Component {
 	constructor(props) {
@@ -22,20 +20,40 @@ class OnePage extends Component {
 		console.log("---- componentDidMount --->");
 
 		let { id } = this.props;
-		// console.log("> id", id);
+		let { username } = this.props.match.params;
+		console.log('username',username);
 
-		API.getOne(id).then(response => {
-			// console.log("> response.data", response.data);
-			let { id,text } = response.data;
-			console.log('> id',id);
-			console.log('> text',text);
+		API.getUserData(username).then(response => {
+			let content = response.data.text;
+			console.log('content',content);
 
 			this.setState({
-				id: id,
-				initial: text,
-				content: text
+				username,
+				content,
 			});
 		});
+
+		// API.getUser(username).then(response => {
+		// 	let { user, id } = response.data;
+		// 	this.setState({
+		// 		id: id,
+		// 		content: `user ${user} uuid ${id}`
+		// 	});
+		// });
+
+		
+		// API.getOne(id).then(response => {
+		// 	// console.log("> response.data", response.data);
+		// 	let { id,text } = response.data;
+		// 	console.log('> id',id);
+		// 	console.log('> text',text);
+
+		// 	this.setState({
+		// 		id: id,
+		// 		initial: text,
+		// 		content: text
+		// 	});
+		// });
 	};
 
 	//==================================================

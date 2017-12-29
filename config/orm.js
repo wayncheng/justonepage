@@ -1,15 +1,51 @@
 'use strict';
 (function(){
 ////////////////////////////////////////////////////
-	// Import MySQL connection.
-	var connection = require("../config/connection.js");
-	// const table = 'justonepage_db.pages'
-	const table = process.env.JAWSDB_DB+'.pages'
-	
-	// Object for all our SQL statement functions.
-	var orm = {
-		one: function(id, cb) {
-			var queryString = `SELECT * FROM ${table} WHERE id = ${id}`;
+// Import MySQL connection.
+const connection = require("../config/connection.js"); 
+
+// Database / Table variables to use in ORM
+const DB = process.env.JAWSDB_DB;
+const PAGES_TABLE = DB+'.pages';
+const USERS_TABLE = DB+'.users';
+
+////////////////////////////////////////////////////
+	const orm = {
+		// one: function(id, cb) {
+		// 	var queryString = `SELECT * FROM ${PAGES_TABLE} WHERE id = ${id}`;
+		// 	console.log('queryString',queryString);
+
+		// 	connection.query(queryString, function(err, result) {
+		// 		if (err) { throw err }
+
+		// 		let { id , text } = result[0];
+		// 		console.log('id',id);
+		// 		console.log('text',text);
+
+		// 		cb(result[0]);
+		// 	});
+		// },
+		////////////////////////////////////////////////////
+		getUserData: function(username,cb){
+			console.log('ORM >>> getUserData');
+			let query = `
+				SELECT ${PAGES_TABLE}.text
+				FROM ${PAGES_TABLE}
+				LEFT JOIN ${USERS_TABLE} 
+				ON ${PAGES_TABLE}.uuid = ${USERS_TABLE}.id
+				WHERE ${USERS_TABLE}.user = "${username}";
+			`;
+			
+			connection.query(query, (err,result) => {
+				if (err) throw err;
+				let dbResponse = result[0];
+				console.log('dbResponse',dbResponse);
+				cb(dbResponse);
+			});
+		},
+		////////////////////////////////////////////////////
+		getById: function(id, cb) {
+			var queryString = `SELECT * FROM ${PAGES_TABLE} WHERE id = ${id}`;
 			console.log('queryString',queryString);
 
 			connection.query(queryString, function(err, result) {
@@ -22,23 +58,43 @@
 				cb(result[0]);
 			});
 		},
-		create: function(table, cols, vals, cb) {
-			var queryString = "INSERT INTO " + table;
-			
-			queryString += " (";
-			queryString += cols.toString();
-			queryString += ") ";
-			queryString += "VALUES (";
-			queryString += printQuestionMarks(vals.length);
-			queryString += ") ";
+		////////////////////////////////////////////////////
+		getByName: function(username, cb) {
+			console.log('ORM -- getByName -->');
+			let user = username.trim();
+
+			const queryString = `SELECT * FROM ${USERS_TABLE} WHERE user = "${user}"`;
+
+			connection.query(queryString, (err, result) => {
+				if (err) { throw err }
+
+				let userData = result[0];
+				console.log('userData',userData);
+
+				// Send back to API
+				cb(userData);
+			});
+		},
+
+		create: function(cols, vals, cb) {
+			const colString = cols.toString();
+			const questionMarks = printQuestionMarks(vals.length);
+			const queryString = 
+				`INSERT INTO ${PAGES_TABLE} (${colString}) 
+				VALUES (${questionMarks})`;
 			
 			console.log(queryString);
 			
-			connection.query(queryString, vals, function(err, result) {
-				if (err) {
-					throw err;
-				}
-				
+			// var queryString = "INSERT INTO " + PAGES_TABLE;
+			// queryString += " (";
+			// queryString += cols.toString();
+			// queryString += ") ";
+			// queryString += "VALUES (";
+			// queryString += printQuestionMarks(vals.length);
+			// queryString += ") ";
+		
+			connection.query( queryString, vals, (err,result) => {
+				if (err) throw err;
 				cb(result);
 			});
 		},
@@ -46,7 +102,7 @@
 		update: function(id, text, cb) {
 			
 			// UPDATE `justonepage_db`.`pages` SET `text`='one' WHERE `id`='1';
-			var queryString = `UPDATE ${table} SET text = "${text}" WHERE id = ${id}`;
+			var queryString = `UPDATE ${PAGES_TABLE} SET text = "${text}" WHERE id = ${id}`;
 			console.log(queryString);
 			
 			connection.query(queryString, function(err, result) {
