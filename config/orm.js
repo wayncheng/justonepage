@@ -8,7 +8,7 @@ const connection = require("../config/connection.js");
 const DB = process.env.JAWSDB_DB;
 const PAGES_TABLE = DB+'.pages';
 const USERS_TABLE = DB+'.users';
-
+const joinQuery = ` LEFT JOIN ${USERS_TABLE} ON ${PAGES_TABLE}.uuid = ${USERS_TABLE}.id `;
 ////////////////////////////////////////////////////
 	const orm = {
 		// one: function(id, cb) {
@@ -30,16 +30,13 @@ const USERS_TABLE = DB+'.users';
 			console.log('ORM >>> getUserData');
 			let query = `
 				SELECT ${PAGES_TABLE}.text
-				FROM ${PAGES_TABLE}
-				LEFT JOIN ${USERS_TABLE} 
-				ON ${PAGES_TABLE}.uuid = ${USERS_TABLE}.id
+				${joinQuery}
 				WHERE ${USERS_TABLE}.user = "${username}";
 			`;
 			
 			connection.query(query, (err,result) => {
 				if (err) throw err;
 				let dbResponse = result[0];
-				console.log('dbResponse',dbResponse);
 				cb(dbResponse);
 			});
 		},
@@ -75,7 +72,29 @@ const USERS_TABLE = DB+'.users';
 				cb(userData);
 			});
 		},
+		////////////////////////////////////////////////////
+		updateContent: (username, content, cb) => {
 
+			console.log('ORM >>> updateContent');
+			let query = `
+				UPDATE ${PAGES_TABLE}
+				${joinQuery}
+				SET ${PAGES_TABLE}.text=${content}
+				WHERE ${USERS_TABLE}.user = "${username}";
+				`;``
+				console.log('query',query);
+			// UPDATE rhq76pa9g6fgmuia.pages
+			// SET text = "<$query>"
+			// WHERE uuid = <$uuid>
+			
+			
+			connection.query(query, (err,result) => {
+				if (err) throw err;
+				let dbResponse = result[0];
+				cb(dbResponse);
+			});
+		},
+		////////////////////////////////////////////////////
 		create: function(cols, vals, cb) {
 			const colString = cols.toString();
 			const questionMarks = printQuestionMarks(vals.length);
@@ -98,6 +117,7 @@ const USERS_TABLE = DB+'.users';
 				cb(result);
 			});
 		},
+		////////////////////////////////////////////////////
 		// An example of objColVals would be {name: panther, sleepy: true}
 		update: function(id, text, cb) {
 			
