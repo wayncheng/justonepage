@@ -2,7 +2,6 @@
 
 (function() {
 	// DEPENDENCIES ===================================
-	// const exphbs = require("express-handlebars");
 	// const methodOverride = require("method-override");
 	const express = require("express");
 	const bodyParser = require("body-parser");
@@ -21,15 +20,14 @@
 	// 	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
 	// 	next();
 	// });
-
-	// Set Handlebars
-	// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-	// app.set("view engine", "handlebars");
+	
+	// View Engine
+	// app.set('view engine', 'html');
 
 	// Set Body Parser
 	app.use(bodyParser.json());
-	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(bodyParser.text());
+	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 	// Cookie Parsing
@@ -45,10 +43,10 @@
 
 	// Sets access control headers
 	// logs each url that is requested, then passes it on.
-	app.use(function(req, res, next) {
+	app.use( (req, res, next) => {
+		console.log("url : " + req.url);
 		res.header('Access-Control-Allow-Origin', '*')
 		res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-		console.log("url : " + req.url);
 		next();
 	});
 
@@ -69,15 +67,15 @@
 	// API Routes
 	const apiRoutes = require('./controllers/api-controller')
 	app.use('/api', apiRoutes)
+	
+	// Basic HTML gets (Handled by ReactRouter)
+	// const routes = require("./controllers/basic-controller");
+	// app.use("/", routes);
 
 	// Default React route
 	app.get("*", (req, res, next) => {
 		res.sendFile(path.join(__dirname, "./public/index.html"));
 	});
-
-	// Basic HTML gets
-	// const routes = require("./controllers/basic-controller.js");
-	// app.use("/", routes);
 
 // ERRORS =========================================
 	app.use(function(req, res) {
@@ -93,9 +91,7 @@
 	});
 
 // START SERVER ===================================
-	app.listen(PORT, function() {
-		console.log(`-------------------------------------------------------
-                                          ready @ ${PORT}`);
-	});
-	//==================================================
+const server = app.listen( PORT, () => console.log("----------------------- @ " + PORT) );
+
+module.exports = server; // Export for testing
 })();

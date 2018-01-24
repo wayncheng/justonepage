@@ -1,0 +1,33 @@
+@import "config/_config";
+
+#error404-root {
+	padding: 5%;
+	.headline {
+		font-weight: unset;
+	}
+	.subheadline {
+		margin-top: 2rem;
+		font-weight: $light;
+		max-width: 420px;
+	}
+	h2 {
+		font-weight: $regular;
+		font-size: 3rem;
+	}
+	.pop {
+		font-weight: $heavy
+	}
+
+	#waldo-img {
+		height: 200px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	.page-focus {
+		// width: 100%;
+		// padding: 0 5%;
+		// max-width: 700px;
+	}
+}

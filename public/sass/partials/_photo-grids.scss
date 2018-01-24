@@ -38,3 +38,30 @@ article {
     display: none;
   }
 }
+
+.photo-grid-wrap {
+	position: relative;
+	z-index: 8000;
+}
+
+// React Photoswipe -------------------------------
+
+.pswp-gallery {
+	.pswp-thumbnails {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		.pswp-thumbnail {
+			margin: 2px;
+			cursor: pointer;
+			img {
+
+			}
+		}
+	}
+	.pswp {
+
+	}
+}

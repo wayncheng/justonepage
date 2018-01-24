@@ -9,6 +9,16 @@ const API = {
 		return axios.get('/api/'+id);
 	},
 
+	getUser: function(username){
+		console.log('---- API getUser --->');		
+		return axios.get(`/api/user/${username}`);
+	},
+
+	getUserData: (username) => {
+		console.log('---- API getUserData --->');		
+		return axios.get(`/api/data/${username}`);
+	},
+
 	// addNew: function(){
 	// 	return axios.post('/api/new-user')
 	// },

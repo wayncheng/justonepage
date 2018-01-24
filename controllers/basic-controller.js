@@ -2,10 +2,19 @@
 "use strict";
 (function() {
 
-  var express = require("express");
-	var router = express.Router();
+  const express = require("express");
+	const router = express.Router();
 	
 
+//================================================== 
+router.get("/:username?", function(req, res) {
+	// const {username} = req.params;
+
+	res.json({
+		status: '200',
+		user: req.params.username,
+	})
+});
 //================================================== 
 router.get("/", function(req, res) {
     res.render("index", {

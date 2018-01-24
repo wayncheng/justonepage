@@ -10,39 +10,82 @@ module.exports = {
 	},
 
 	resolve: {
-		extensions: ["", ".js", ".jsx", '.webpack.js', '.web.js' ],
-		modulesDirectories: [path.resolve(__dirname, "node_modules")]
-	},
-	resolveLoader: {
-		root: path.resolve(__dirname, "node_modules")
+		extensions: [".js", ".jsx"],
+		modules: [path.join(__dirname, "src"), "node_modules"]
 	},
 
 	// This section desribes the transformations we will perform
 	module: {
-		// noParse: ["/node_modules/aframe/dist/aframe-master.js"],
 		loaders: [
 			{
-				// Only working with files that in in a .js or .jsx extension
 				test: /\.jsx?$/,
-				// Webpack will only process files in our src folder. This avoids processing
-				// node modules and server files unnecessarily
 				include: /src/,
 				exclude: path.resolve(__dirname, "node_modules"),
-				loader: "babel",
-				query: {
+				loader: "babel-loader",
+				options: {
 					// These are the specific transformations we'll be using.
 					presets: ["react", "es2015", "stage-2"]
 				}
 			},
-			{
-				test: /\.css$/,
-				loader: "style-loader!css-loader"
+			{ // CSS 
+				test: /(\.min)?\.css$/,
+				use: ["style-loader", "css-loader"]
 			},
-			{ test: /\.json$/, loader: "json-loader" }
+			{ // WOFF, WOFF2 
+				test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				// Limiting the size of the woff fonts breaks font-awesome ONLY for the extract text plugin
+				// loader: "url?limit=10000"
+				use: ["url-loader"]
+			},
+			{ // TTG, EOT 
+				test: /\.(ttf|eot)(\?[\s\S]+)?$/,
+				use: ["file-loader"]
+			},
+			{ // SVG 
+				test: /\.svg$/,
+				exclude: /node_modules/,
+				use: ["svg-react-loader"],
+				// options: {
+				// 	classIdPrefix: "[name]-[hash:8]__",
+				// 	filters: [
+				// 			function (value) {
+				// 					// ...
+				// 					this.update(newvalue);
+				// 			}
+				// 	],
+				// 	propsMap: {
+				// 			fillRule: 'fill-rule',
+				// 			foo: 'bar'
+				// 	},
+				// 	xmlnsTest: /^xmlns.*$/
+				// }
+			},
+			{ // GIF, PNG, JPG, JPEG
+				test: /\.(gif|png|jpe?g)$/i,
+				// include: /public/, // only process files in public
+				exclude: path.resolve(__dirname, "node_modules"),
+				
+				// exclude: [
+				// 	path.resolve(__dirname, "node_modules"),
+				// 	path.resolve(__dirname, "public", "libs")
+				// ],
+				use: [ 
+					{
+						loader: 'file-loader',
+						options: {
+							emitFile: false,
+						},
+					},
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							bypassOnDebug: true,
+						},
+					},
+				],
+			},
 		]
 	},
-	// This lets us debug our react code in chrome dev tools. Errors will have lines and file names
-	// Without this the console says all errors are coming from just coming from bundle.js
 	devtool: "eval-source-map",
 
 	node: {

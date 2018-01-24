@@ -1,0 +1,170 @@
+
+
+html {
+	font-size: 14px;
+	
+}
+#justoneroot {
+	position: relative;
+
+	overflow-x: hidden;
+	height: 100%;
+}
+
+
+main {
+	height: initial;
+	min-height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position: absolute;
+	top: 0;
+	margin: 0;
+	// padding: 6rem 6rem 0;
+}
+
+
+.content-wrap {
+	font-size: 18px;
+	width: 100%;
+	// width: 90%;
+	max-width: 900px;
+	margin: auto;
+	padding: 6rem 6rem 0;
+	// padding: 1rem 1rem 0;
+	border: 1px solid #ddd;
+	min-height: 85vh;
+	margin-bottom: 0;
+	outline: none;
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+	line-height: 1.25;
+	color: rgba(0,0,0,0.87);
+	font-weight: lighter;
+
+	&:hover, &:active, &:focus {
+		outline: none;
+	}
+}
+
+.ws-btn {
+	border: none;
+}
+
+.globalnav {
+	// display: flex;
+	// flex-direction: row;
+	// justify-content: space-between;
+	// align-items: center;
+	display: inline-block;
+	// flex-direction: unset;
+	// justify-content: unset;
+	// align-items: unset;
+	padding: 0 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	width: initial;
+
+	& > * {
+		float: left;
+	}
+	#save-btn {
+		// margin-top: 0.6rem;
+		display: inline-block;
+		margin: 0.6rem;
+	}
+}
+
+.sitename-wrap {
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	// By setting width equal to line height, 
+	// it creates a square, which is easier to 
+	// position than the rectangle that was 
+	// flipped but not at the same time.
+	width: 1em; /*___IMPORTANT___*/
+}
+.sitename {
+	transform: rotate(270deg);
+	font-size: 1rem;
+	color: #242424;
+}
+
+
+.modal-layer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(81,81,81,.24);
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+
+	&.closed {
+		z-index: -1;
+		visibility: hidden;
+		display: none;
+	}
+
+	.close-btn {
+		position: fixed;
+		top: 1rem; 
+		right: 1rem;
+	}
+}
+.user-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	height: initial;
+	width: 100%;
+	max-width: 400px;
+	padding: 2rem;
+	background-color: #fff;
+	z-index: 9010;
+	border-radius: 5px;
+
+	& > * {
+		margin: .5rem 0;
+		font-size: 1.2rem;
+	}
+
+	input[type="text"] {
+		border: 2px solid rgba(0,0,0,0.25);
+		outline: none;
+		padding: 0 1em;
+		line-height: 2.5em;
+		border-radius: 5px;
+		&:focus, &:active, &:hover {
+			border-color: rgba(0,0,0,1);
+		}
+	}
+}
+
+
+.pin-top-left {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+}
+
+.blurred-out {
+	-webkit-filter: blur(6px);
+		 -moz-filter: blur(6px);
+			-ms-filter: blur(6px);
+			 -o-filter: blur(6px);
+					filter: blur(6px);
+}

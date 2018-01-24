@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.scss"
+	],
+	"sourcesContent": [
+		"html {\r\n\tfont-size: 18px;\r\n  font-family: 'Source Code Pro', monospace;\r\n}\r\n\r\n\r\n\r\nform {\r\n\tdisplay: flex;\r\n\tflex-direction: column;\r\n\talign-items: flex-start;\r\n\tmargin: 2rem 0;\r\n}\r\n\r\n\r\n.content-wrap {\r\n\twidth: 90%;\r\n\tmax-width: 900px;\r\n\theight: initial;\r\n\tmin-height: 60vh;\r\n\tmargin: auto;\r\n\tpadding: 2rem 1rem;\r\n\toverflow-x: hidden;\r\n\toutline: 1px solid #ccc;\r\n\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// #doc {\r\n//   padding: 2rem;\r\n//   outline: none;\r\n//   border: none;\r\n//   border-radius: 5px;\r\n//   box-shadow: none;\r\n//   max-width: 700px;\r\n//   font-family: 'Source Code Pro', monospace;\r\n//   font-weight: 300;\r\n//   background-color: #282c34;\r\n//   color: #abb2bf;\r\n// \t.doc-row {\r\n// \t\tpadding: 0;\r\n// \t\tposition: relative;\r\n// \t\tdisplay: flex;\r\n// \t\tflex-direction: row;\r\n// \t\talign-items: stretch;\r\n// \t\t&.alternate {\r\n// \t\t\tbackground-color: #363a4f;\r\n// \t\t}\r\n// \t\t.gutter {\r\n// \t\t\tdisplay: none;\r\n// \t\t\tvisibility: hidden;\r\n// \t\t\tbackground-color: transparent;\r\n// \t\t\tflex-basis: 1rem;\r\n// \t\t\tcolor: #abb2bf;\r\n// \t\t\tpadding: 8px;\r\n// \t\t\ttext-align: right;\r\n// \t\t}\r\n// \t\t.content-group {\r\n// \t\t\tflex: 1;\r\n// \t\t}\r\n\t\t\r\n// \t}\r\n// }"
+	],
+	"mappings": ";AAAA,AAAA,IAAI,CAAC;EACJ,SAAS,EAAE,IAAK;EACf,WAAW,EAAE,4BAA6B;CAC3C;;;AAID,AAAA,IAAI,CAAC;EACJ,OAAO,EAAE,IAAK;EACd,cAAc,EAAE,MAAO;EACvB,WAAW,EAAE,UAAW;EACxB,MAAM,EAAE,MAAO;CACf;;;AAGD,AAAA,aAAa,CAAC;EACb,KAAK,EAAE,GAAI;EACX,SAAS,EAAE,KAAM;EACjB,MAAM,EAAE,OAAQ;EAChB,UAAU,EAAE,IAAK;EACjB,MAAM,EAAE,IAAK;EACb,OAAO,EAAE,SAAU;EACnB,UAAU,EAAE,MAAO;EACnB,OAAO,EAAE,cAAe;CAExB",
+	"names": []
+}

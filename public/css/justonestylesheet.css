@@ -1,0 +1,174 @@
+/* line 3, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+html {
+  font-size: 14px;
+}
+
+/* line 7, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+#justoneroot {
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* line 15, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+main {
+  height: initial;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
+/* line 28, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.content-wrap {
+  font-size: 18px;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 6rem 6rem 0;
+  border: 1px solid #ddd;
+  min-height: 85vh;
+  margin-bottom: 0;
+  outline: none;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: lighter;
+}
+
+/* line 48, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.content-wrap:hover, .content-wrap:active, .content-wrap:focus {
+  outline: none;
+}
+
+/* line 53, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.ws-btn {
+  border: none;
+}
+
+/* line 57, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.globalnav {
+  display: inline-block;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  width: initial;
+}
+
+/* line 74, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.globalnav > * {
+  float: left;
+}
+
+/* line 77, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.globalnav #save-btn {
+  display: inline-block;
+  margin: 0.6rem;
+}
+
+/* line 84, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.sitename-wrap {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 1em;
+  /*___IMPORTANT___*/
+}
+
+/* line 94, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.sitename {
+  transform: rotate(270deg);
+  font-size: 1rem;
+  color: #242424;
+}
+
+/* line 101, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.modal-layer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(81, 81, 81, 0.24);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+}
+
+/* line 115, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.modal-layer.closed {
+  z-index: -1;
+  visibility: hidden;
+  display: none;
+}
+
+/* line 121, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.modal-layer .close-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* line 127, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: initial;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #fff;
+  z-index: 9010;
+  border-radius: 5px;
+}
+
+/* line 140, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.user-form > * {
+  margin: .5rem 0;
+  font-size: 1.2rem;
+}
+
+/* line 145, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.user-form input[type="text"] {
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  outline: none;
+  padding: 0 1em;
+  line-height: 2.5em;
+  border-radius: 5px;
+}
+
+/* line 151, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.user-form input[type="text"]:focus, .user-form input[type="text"]:active, .user-form input[type="text"]:hover {
+  border-color: black;
+}
+
+/* line 158, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.pin-top-left {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+/* line 164, /Users/waynecheng/git/justonepage/public/sass/justonestylesheet.scss */
+.blurred-out {
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -ms-filter: blur(6px);
+  -o-filter: blur(6px);
+  filter: blur(6px);
+}
+
+/*# sourceMappingURL=../css/justonestylesheet.map */

@@ -6,9 +6,16 @@ import OnePage from "../OnePage";
 const Routes = (
 		<BrowserRouter >
         <Switch>
-            <Route exact path="/" component={OnePage} />
+            {/* <Route path="/@" component={OnePage} /> */}
+            <Route path="/:username?" component={OnePage} />
+            <Route component={NoMatch} />
         </Switch>
     </BrowserRouter>
 );
-
 export default Routes;
+
+const NoMatch = ({ location }) => (
+  <div>
+    <h3>No match for <code>{location.pathname}</code></h3>
+  </div>
+)

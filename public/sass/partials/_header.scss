@@ -1,4 +1,4 @@
-header.ws-header {
+.ws-header {
 	// display: block;
 	width: 100%;
 	background-color: #242424;
@@ -10,10 +10,13 @@ header.ws-header {
 	padding-top: 5rem; // extra padding on top for nav
 	text-align: center;
 	position: relative;
-	flex-direction: column;
 	min-height: 400px;
 	z-index: 7000;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 	.header-content {
 		width: 100%;
@@ -51,25 +54,11 @@ header.ws-header {
 	&.baseline {
 		font-size: 1.5rem;
 		padding-top: 2rem;
-		height: 60vh;
-		min-height: 600px;
+		height: 85vh;
+		min-height: 500px;
+		max-height: 100vh;
 		.headline {
 			font-weight: 700;
 		}
-	}
-}
-
-#vrooms-entity-band {
-	height: 80%;
-	-webkit-animation: rotation ease-in-out;
-	-webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-	animation-iteration-count: 1;
-}
-@-webkit-keyframes rotation {
-	from {
-		-webkit-transform: rotate(0deg);
-	}	
-	to {
-		-webkit-transform: rotate(-45deg);
 	}
 }
