@@ -23,6 +23,9 @@ class OnePage extends Component {
 		let { username } = this.props.match.params;
 		console.log('username',username);
 
+		// ----------------------
+		// 	getUserData
+		// ----------------------
 		API.getUserData(username).then(response => {
 			let content = response.data.text;
 			console.log('content',content);

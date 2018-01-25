@@ -30,9 +30,11 @@ const joinQuery = ` LEFT JOIN ${USERS_TABLE} ON ${PAGES_TABLE}.uuid = ${USERS_TA
 			console.log('ORM >>> getUserData');
 			let query = `
 				SELECT ${PAGES_TABLE}.text
+				FROM ${PAGES_TABLE}
 				${joinQuery}
 				WHERE ${USERS_TABLE}.user = "${username}";
 			`;
+			console.log('username:',username)
 			
 			connection.query(query, (err,result) => {
 				if (err) throw err;
@@ -81,7 +83,7 @@ const joinQuery = ` LEFT JOIN ${USERS_TABLE} ON ${PAGES_TABLE}.uuid = ${USERS_TA
 				${joinQuery}
 				SET ${PAGES_TABLE}.text=${content}
 				WHERE ${USERS_TABLE}.user = "${username}";
-				`;``
+				`;
 				console.log('query',query);
 			// UPDATE rhq76pa9g6fgmuia.pages
 			// SET text = "<$query>"
